@@ -1,0 +1,90 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Street address1:</b>
+  <%= @listing.street_address1 %>
+</p>
+
+<p>
+  <b>Street address2:</b>
+  <%= @listing.street_address2 %>
+</p>
+
+<p>
+  <b>Unit number:</b>
+  <%= @listing.unit_number %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @listing.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @listing.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @listing.zip %>
+</p>
+
+<p>
+  <b>Available:</b>
+  <%= @listing.available %>
+</p>
+
+<p>
+  <b>Bath:</b>
+  <%= @listing.bath %>
+</p>
+
+<p>
+  <b>Building description:</b>
+  <%= @listing.building_description %>
+</p>
+
+<p>
+  <b>Landlord:</b>
+  <%= @listing.landlord_id %>
+</p>
+
+<p>
+  <b>Laundry:</b>
+  <%= @listing.laundry %>
+</p>
+
+<p>
+  <b>Parking:</b>
+  <%= @listing.parking %>
+</p>
+
+<p>
+  <b>Pets:</b>
+  <%= @listing.pets %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @listing.price %>
+</p>
+
+<p>
+  <b>Showing instruction:</b>
+  <%= @listing.showing_instruction %>
+</p>
+
+<p>
+  <b>Unit description:</b>
+  <%= @listing.unit_description %>
+</p>
+
+<p>
+  <b>Utilities included:</b>
+  <%= @listing.utilities_included %>
+</p>
+
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

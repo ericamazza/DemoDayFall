@@ -1,0 +1,55 @@
+<h1>Listing listings</h1>
+
+<table>
+  <tr>
+    <th>Street address1</th>
+    <th>Street address2</th>
+    <th>Unit number</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Available</th>
+    <th>Bath</th>
+    <th>Building description</th>
+    <th>Landlord</th>
+    <th>Laundry</th>
+    <th>Parking</th>
+    <th>Pets</th>
+    <th>Price</th>
+    <th>Showing instruction</th>
+    <th>Unit description</th>
+    <th>Utilities included</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @listings.each do |listing| %>
+  <tr>
+    <td><%= listing.street_address1 %></td>
+    <td><%= listing.street_address2 %></td>
+    <td><%= listing.unit_number %></td>
+    <td><%= listing.city %></td>
+    <td><%= listing.state %></td>
+    <td><%= listing.zip %></td>
+    <td><%= listing.available %></td>
+    <td><%= listing.bath %></td>
+    <td><%= listing.building_description %></td>
+    <td><%= listing.landlord_id %></td>
+    <td><%= listing.laundry %></td>
+    <td><%= listing.parking %></td>
+    <td><%= listing.pets %></td>
+    <td><%= listing.price %></td>
+    <td><%= listing.showing_instruction %></td>
+    <td><%= listing.unit_description %></td>
+    <td><%= listing.utilities_included %></td>
+    <td><%= link_to 'Show', listing %></td>
+    <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+    <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Listing', new_listing_path %>

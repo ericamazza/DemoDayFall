@@ -1,0 +1,85 @@
+<%= form_for(@listing) do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :street_address1 %><br />
+    <%= f.text_field :street_address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :street_address2 %><br />
+    <%= f.text_field :street_address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_number %><br />
+    <%= f.number_field :unit_number %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :available %><br />
+    <%= f.number_field :available %>
+  </div>
+  <div class="field">
+    <%= f.label :bath %><br />
+    <%= f.text_field :bath %>
+  </div>
+  <div class="field">
+    <%= f.label :building_description %><br />
+    <%= f.text_area :building_description %>
+  </div>
+  <div class="field">
+    <%= f.label :landlord_id %><br />
+    <%= f.number_field :landlord_id %>
+  </div>
+  <div class="field">
+    <%= f.label :laundry %><br />
+    <%= f.text_field :laundry %>
+  </div>
+  <div class="field">
+    <%= f.label :parking %><br />
+    <%= f.text_field :parking %>
+  </div>
+  <div class="field">
+    <%= f.label :pets %><br />
+    <%= f.text_field :pets %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :showing_instruction %><br />
+    <%= f.text_area :showing_instruction %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_description %><br />
+    <%= f.text_area :unit_description %>
+  </div>
+  <div class="field">
+    <%= f.label :utilities_included %><br />
+    <%= f.text_area :utilities_included %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
